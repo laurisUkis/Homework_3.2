@@ -12,27 +12,27 @@ public class PrimeGenerator {
 		System.out.print("Enter the number of prime numbers you want to generate - up to 100 prime numbers: ");
 		int thisMany = sc.nextInt();
 
-		if (thisMany > 100 || thisMany < 0) {  											//
-			isNotValid = true;															//
-		}																				//
-																						//	
-		else {																			//	
-			isNotValid = false;															//	
-																						//			
-		}																				//			
-																						//
-		while (isNotValid) {															//
-			System.out.print("You might be out of bounds. Please try again: ");			//checks if the numbers is between
-			thisMany = sc.nextInt();													//			0 and 100
-			if (thisMany > 100 || thisMany < 0) {										//		else error message
-				isNotValid = true;														//		
-			}																			//
-																						//
-			else {																		//
-				isNotValid = false;														//
-																						//
-			}																			//	
-		}																				//
+		if (thisMany > 100 || thisMany < 0) {  											
+			isNotValid = true;															
+		}																				
+																							
+		else {																				
+			isNotValid = false;																
+																									
+		}																							
+																						
+		while (isNotValid) {															
+			System.out.print("You might be out of bounds. Please try again: ");			//checks if the numbers is between 0 and 100 else error message
+			thisMany = sc.nextInt();																
+			if (thisMany > 100 || thisMany < 0) {												
+				isNotValid = true;																
+			}																			
+																						
+			else {																		
+				isNotValid = false;														
+																						
+			}																				
+		}																				
 
 		sc.close();
 
@@ -41,19 +41,19 @@ public class PrimeGenerator {
 			System.out.print(2 + " ");                                                 // initialize the first prime number
 		}
 
-		for (int count = 2; count <= thisMany;) {									//
-			for (int j = 2; j <= Math.sqrt(x); j++) {								//
+		for (int count = 2; count <= thisMany;) {									
+			for (int j = 2; j <= Math.sqrt(x); j++) {								
 				if (x % j == 0) {													// checking if the number is not prime
-					status = 0;														//
-					break;															//	
+					status = 0;														
+					break;																
 				}
 			}
 			if (status != 0) {														//if is prime
-				System.out.print(x + " ");											//print out
-				count++;															//
+				System.out.print(x + " ");											       //print out
+				count++;															
 			}
-			status = 1;																//
-			x++;																	//
+			status = 1;																
+			x++;																	
 		}
 	}
 
